@@ -24,7 +24,10 @@ class MainActivity : AppCompatActivity() {
             splashScreen.setOnExitAnimationListener { splashScreenView ->
                 // Create your custom animation.
                 val slideUp = ObjectAnimator.ofFloat(
-                    splashScreenView, View.TRANSLATION_Y, 0f, -splashScreenView.height.toFloat()
+                    splashScreenView,
+                    View.TRANSLATION_Y,
+                    0f,
+                    -splashScreenView.height.toFloat()
                 )
                 slideUp.interpolator = AnticipateInterpolator()
                 slideUp.duration = 1000L
